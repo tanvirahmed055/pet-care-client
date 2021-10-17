@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Col, Button } from 'react-bootstrap';
 
 const Service = (props) => {
-    console.log(props);
+
     const { name, img, shortDescription } = props.service;
 
     return (

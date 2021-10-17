@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Dental Care",
+        "img": "https://www.hancockparkvetclinic.com/wp-content/uploads/2020/03/shutterstock_276552596.jpg",
+        "shortDescription": "Regular professional cleanings help keep your pet's teeth healthy and alert you to potential problems.",
+        "detailDescription": "Dental care is often an overlooked aspect of healthcare in animals. Animals suffer from cavities, plaque and tartar buildup, gum disease, and even abscessed teeth. Regular professional cleanings help keep your pet's teeth healthy and alert you to potential problems. Periodontal disease can develop when plaque and tartar build up underneath the gums. If the bacteria that caused the plaque enters your pet's bloodstream, it can create heart, lung, and kidney problems. Signs that indicate your pet needs dental care include bad breath, lack of appetite, crying when eating, and lethargy."
+    },
+    {
+        "id": 2,
+        "name": "Emergency and Critical Care",
+        "img": "https://i1.sndcdn.com/artworks-000602110168-m57mcd-t500x500.jpg",
+        "shortDescription": "Emergency care is offered during regular business hours.",
+        "detailDescription": "In any emergency, seconds count. If at all possible, please call ahead and let us know you are coming. Emergency care is offered during regular business hours. No appointment is necessary. We also utilize the services of a fully staffed, local emergency center. Should your pet require specialty care, we will refer your pet to a veterinary specialist."
+    },
+    {
+        "id": 3,
+        "name": "Full Body Tone Up",
+        "img": "https://www.mensjournal.com/wp-content/uploads/mf/chairdip_5.jpg?quality=86&strip=all",
+        "shortDescription": "Vaccinations are essential in protecting your pet against disease. We recommend the first round of vaccinations between six (6) and eight (8) weeks of age.",
+        "detailDescription": " Immunizations for dogs include Canine Distemper virus, Adenovirus, Parainfluenza virus, Parvovirus, and four strains of Leptospirosis. All dogs are required to have a Rabies vaccination at three months of age. If you are boarding your dog at our facility,  he or she must also receive a vaccination against kennel cough and canine influenza virus.Immunizations for cats include Panleukopenia (feline distemper), feline Calicivirus, feline herpesvirus type I (Rhinotracheitis) and rabies.Protect your puppy or kitten against these potentially life-threatening diseases."
+    },
+    {
+        "id": 4,
+        "name": "Surgery",
+        "img": "https://le-cdn.hibuwebsites.com/900e3e859303402b8e6fa4f5b2582f7e/dms3rep/multi/opt/img23-640w.jpg",
+        "shortDescription": "Veterinarians are highly skilled and trained surgeons. At Pet Medical Center, we offer the most advanced surgical techniques and technology.",
+        "detailDescription": "Veterinarians are highly skilled and trained surgeons. At Pet Medical Center, we offer the most advanced surgical techniques and technology. We carefully screen all patients for safety and specifically tailor the anesthetics to your pet. You can rest assured that your pet will receive the safest, most efficient, state-of-the-art procedures which include a board-certified surgeon available for consultation,  fully trained veterinary and technical staff, heated surgery tables for greater comfort; advanced sterilization techniques; ECG and oxygen saturation monitors; intensive after surgery care and full blood testing."
+    },
+    {
+        "id": 5,
+        "name": "Full Body Tone Up",
+        "img": "https://static.parade.com/wp-content/uploads/2018/08/Pet-Microchip-FTR.jpg",
+        "shortDescription": "Thanks to Microchipping, pets are reunited with their owners every day. Collars fall off or can be removed, while a Microchip is a permanent source of identification for your pet.",
+        "detailDescription": "Thanks to Microchipping, pets are reunited with their owners every day. Collars fall off or can be removed, while a Microchip is a permanent source of identification for your pet. A Microchip is a uniquely numbered chip, about the size of a grain of rice that is injected under the skin of a family pet through a special needle. The chip bears a number that can be accessed by the service provider to reveal your pet's name, along with your name, address, and phone number, and the veterinary clinic that placed the chip. If your pet is ever lost, Microchipping increases the chances of a safe and happy return. Pet Medical Center participates in a nation-wide microchipping program that increases the chances of a safe recovery."
+    },
+    {
+        "id": 6,
+        "name": "Nutritional Counseling",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd41dXDpQY9fWS-K-LDH4e-lOw58xFRktndvMxzvSjGTUz94JlKZGOr9QFuaISe3aLW8g&usqp=CAU",
+        "shortDescription": "Our pet nutritional counseling services will not only help you meet the specific dietary needs of your pet, but will improve his or her overall health as well.",
+        "detailDescription": "Our pet nutritional counseling services will not only help you meet the specific dietary needs of your pet, but will improve his or her overall health as well. We offer a complete range of medical and therapeutic diets, along with super-premium all natural foods. Whether it’s a growing kitten, an aging senior dog, a pet with food or skin allergies, or a pet with other medical conditions, our knowledgeable staff can help you select the best possible food."
+    }
+]

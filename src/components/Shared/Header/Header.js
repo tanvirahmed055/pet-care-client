@@ -14,9 +14,7 @@ const Header = () => {
                         <Nav.Link href="#features" className="me-3">Contact Us</Nav.Link>
                         <Button variant="warning" className="me-3">Login</Button>{' '}
                         <Button variant="danger" className="me-3">Signup</Button>{' '}
-
                     </Nav>
-
                 </Navbar.Collapse>
             </Container>
         </Navbar>

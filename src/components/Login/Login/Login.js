@@ -21,7 +21,7 @@ const Login = () => {
         <div className="container mt-5">
             <h2 className="fw-bolder text-center mb-5">Sign In</h2>
             <Form>
-                <Row className="mb-3">
+                <Row className="mb-5">
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Email</Form.Label>
                         <Form.Control onBlur={handleEmailInput} type="email" placeholder="Enter email" />

@@ -15,9 +15,9 @@ const Header = () => {
                     <Nav className="ms-auto">
                         {userInfo?.email && <Nav.Link className="me-2 fw-bold text-white" href="#features">Signed in as: {userInfo?.displayName}</Nav.Link>}
 
-                        <Nav.Link className="me-2" href="#features">About Us</Nav.Link>
-                        <Nav.Link href="#pricing" className="me-2">Services</Nav.Link>
-                        <Nav.Link href="#features" className="me-3">Contact Us</Nav.Link>
+                        <Nav.Link className="me-2" href="#features">Services</Nav.Link>
+                        <Nav.Link href="#pricing" className="me-2">Our Team</Nav.Link>
+                        <Nav.Link href="#features" className="me-3">About Us</Nav.Link>
 
                         {userInfo?.email ? <Link to="/">
                             <Button variant="warning" className="me-3" onClick={() => handleLogOut()}>Logout</Button>

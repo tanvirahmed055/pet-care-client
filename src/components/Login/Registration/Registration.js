@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import useFirebase from '../../../hooks/useFirebase';
-
+import { Link } from "react-router-dom";
+import './Registration.css';
 
 const Registration = () => {
     const { handleUserRegistration, handleGoogleLogin } = useFirebase();
@@ -42,11 +43,13 @@ const Registration = () => {
                     <Form.Control onBlur={handleNameInput} placeholder="Your Name" />
                 </Form.Group>
 
-
-
-                <Form.Group className="mt-5 mb-5 text-start" id="formGridCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
+                <div className="mt-3 mb-3">
+                    <Link to="/login">
+                        <h4 className="toggle-button">Already Have an account?</h4>
+                        <Button variant="success" className="ms-3" size="lg">Login</Button>
+                    </Link>
+                </div>
+                <br />
 
                 <Button onClick={() => { handleUserRegistration(email, password, name) }} variant="primary" type="button" size="lg">
                     Submit

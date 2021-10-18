@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import useFirebase from '../../../hooks/useFirebase';
+import { Link } from "react-router-dom";
+
 
 const Login = () => {
     const { handleUserLogin, handleGoogleLogin } = useFirebase();
@@ -31,9 +33,12 @@ const Login = () => {
                     </Form.Group>
                 </Row>
 
-                <Form.Group className="mt-5 mb-5 text-start" id="formGridCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
+                <div className="mt-3 mb-5">
+                    <Link to="/register">
+                        <h4 className="toggle-button">New Here?</h4>
+                        <Button variant="success" className="ms-3" size="lg">Sign Up</Button>
+                    </Link>
+                </div>
 
                 <Button onClick={() => { handleUserLogin(email, password) }} variant="primary" type="button" size="lg">
                     Submit

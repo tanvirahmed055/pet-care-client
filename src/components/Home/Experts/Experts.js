@@ -5,7 +5,7 @@ const Experts = () => {
 
     const experts = [
         {
-            name: 'Steve Archi',
+            name: 'Dr. Steve Archi',
             specialities: 'Animal Medicine',
             img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0lv2TTkWj6OkGH25V9gu0Zw0V8MDosT-hWw&usqp=CAU'
         },

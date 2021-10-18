@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import useFirebase from '../../../hooks/useFirebase';
 import { Link } from "react-router-dom";
 import './Registration.css';
+import useAuth from '../../../hooks/useAuth';
 
 const Registration = () => {
-    const { handleUserRegistration, handleGoogleLogin } = useFirebase();
+    const { handleUserRegistration, handleGoogleLogin } = useAuth();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

@@ -5,8 +5,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  useParams
 } from "react-router-dom";
+import ServiceDetails from './components/Home/ServiceDetails/ServiceDetails';
 
 function App() {
   return (
@@ -19,8 +21,8 @@ function App() {
           <Route exact path="/home">
             <Home />
           </Route>
-          <Route path="/services/:serviceId">
-
+          <Route exact path="/services/:serviceId">
+            <ServiceDetails></ServiceDetails>
           </Route>
         </Switch>
       </Router>

@@ -9,6 +9,8 @@ import {
   useParams
 } from "react-router-dom";
 import ServiceDetails from './components/Home/ServiceDetails/ServiceDetails';
+import Login from './components/Login/Login/Login';
+import Registration from './components/Login/Registration/Registration';
 
 function App() {
   return (
@@ -23,6 +25,12 @@ function App() {
           </Route>
           <Route exact path="/services/:serviceId">
             <ServiceDetails></ServiceDetails>
+          </Route>
+          <Route exact path="/login">
+            <Login></Login>
+          </Route>
+          <Route exact path="/register">
+            <Registration></Registration>
           </Route>
         </Switch>
       </Router>

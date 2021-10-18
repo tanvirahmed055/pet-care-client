@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import useServices from '../../../hooks/useServices';
 import {
     useParams
@@ -24,6 +24,7 @@ const ServiceDetails = () => {
                 <Col sm={5}>
                     <h3 className="fw-bolder text-start">Service Name:&nbsp;{currentService?.name}</h3>
                     <p className="text-start mt-5"><span className="text-decoration-underline">Service Description:</span>&nbsp;{currentService?.detailDescription}</p>
+                    <Button variant="primary">Book an appointment</Button>
                 </Col>
             </Row>
         </Container>

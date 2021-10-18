@@ -13,6 +13,9 @@ const useFirebase = () => {
 
     const googleProvider = new GoogleAuthProvider();
 
+
+
+
     const handleUserRegistration = (email, password, name) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
@@ -46,11 +49,18 @@ const useFirebase = () => {
                 // ...
                 console.log(user);
 
+
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
+                console.log(errorCode);
                 console.log(errorMessage);
+                if (errorCode === 'auth/user-not-found') {
+                    alert('Please provide the correct email address to login');
+                } else if (errorCode === 'auth/wrong-password') {
+                    alert('Incorrect Password');
+                }
             });
     }
 
@@ -60,6 +70,8 @@ const useFirebase = () => {
                 // User is signed in, see docs for a list of available properties
                 // https://firebase.google.com/docs/reference/js/firebase.User
                 setUserInfo(user);
+
+
                 // ...
             } else {
                 // User is signed out

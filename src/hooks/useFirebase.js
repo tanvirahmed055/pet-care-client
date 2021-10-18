@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import initializeAuthentication from '../components/Login/Firebase/firebase.init';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 
 initializeAuthentication();
@@ -10,6 +10,8 @@ const useFirebase = () => {
     const [userInfo, setUserInfo] = useState(null);
 
     const auth = getAuth();
+
+    const googleProvider = new GoogleAuthProvider();
 
     const handleUserRegistration = (email, password, name) => {
         createUserWithEmailAndPassword(auth, email, password)
@@ -43,6 +45,7 @@ const useFirebase = () => {
                 const user = result.user;
                 // ...
                 console.log(user);
+
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -74,11 +77,31 @@ const useFirebase = () => {
         });
     }
 
+    const handleGoogleLogin = () => {
+        signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                // The signed-in user info.
+                const user = result.user;
+                // ...
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // The email of the user's account used.
+                const email = error.email;
+                // The AuthCredential type that was used.
+                const credential = GoogleAuthProvider.credentialFromError(error);
+                // ...
+                console.log(errorMessage);
+            });
+    }
+
     return {
         handleUserRegistration,
         handleUserLogin,
         userInfo,
-        handleLogOut
+        handleLogOut,
+        handleGoogleLogin
     };
 };
 

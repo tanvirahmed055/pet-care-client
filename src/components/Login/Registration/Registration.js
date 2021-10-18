@@ -4,7 +4,7 @@ import useFirebase from '../../../hooks/useFirebase';
 
 
 const Registration = () => {
-    const { handleUserRegistration } = useFirebase();
+    const { handleUserRegistration, handleGoogleLogin } = useFirebase();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -50,6 +50,10 @@ const Registration = () => {
 
                 <Button onClick={() => { handleUserRegistration(email, password, name) }} variant="primary" type="button" size="lg">
                     Submit
+                </Button>
+
+                <Button onClick={() => { handleGoogleLogin() }} variant="danger" type="button" size="lg" className="ms-3">
+                    Google Signin
                 </Button>
             </Form>
         </div>

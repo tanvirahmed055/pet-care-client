@@ -3,7 +3,7 @@ import { Button, Col, Form, Row } from 'react-bootstrap';
 import useFirebase from '../../../hooks/useFirebase';
 
 const Login = () => {
-    const { handleUserLogin } = useFirebase();
+    const { handleUserLogin, handleGoogleLogin } = useFirebase();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -37,6 +37,10 @@ const Login = () => {
 
                 <Button onClick={() => { handleUserLogin(email, password) }} variant="primary" type="button" size="lg">
                     Submit
+                </Button>
+
+                <Button onClick={() => { handleGoogleLogin() }} variant="danger" type="button" size="lg" className="ms-3">
+                    Google Signin
                 </Button>
 
             </Form>

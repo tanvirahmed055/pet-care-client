@@ -13,6 +13,7 @@ import Login from './components/Login/Login/Login';
 import Registration from './components/Login/Registration/Registration';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import NotFound from './components/Home/NotFound/NotFound';
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
             </Route>
             <Route exact path="/register">
               <Registration></Registration>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
         </Router>

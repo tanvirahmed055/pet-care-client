@@ -7,14 +7,11 @@ import {
 
 import Image from 'react-bootstrap/Image'
 
-const ServiceDetails = () => {
-
+const AppointmentDetail = () => {
     const [services] = useServices();
     let { serviceId } = useParams();
 
     const currentService = services[serviceId - 1];
-
-
     return (
         <Container className="text-center mt-5">
             <Row>
@@ -31,4 +28,4 @@ const ServiceDetails = () => {
     );
 };
 
-export default ServiceDetails;
+export default AppointmentDetail;

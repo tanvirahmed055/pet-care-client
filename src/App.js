@@ -14,6 +14,8 @@ import Registration from './components/Login/Registration/Registration';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import NotFound from './components/Home/NotFound/NotFound';
+import Store from './components/Store/Store/Store';
+import StoreItemDetail from './components/Store/StoreItemDetail/StoreItemDetail';
 
 function App() {
   return (
@@ -35,6 +37,12 @@ function App() {
             </Route>
             <Route exact path="/register">
               <Registration></Registration>
+            </Route>
+            <Route exact path="/store">
+              <Store></Store>
+            </Route>
+            <Route exact path="/items/:itemId">
+              <StoreItemDetail></StoreItemDetail>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

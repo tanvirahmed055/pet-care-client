@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Rid Worm Dewormer for Roundworms for Cats",
+        "img": "https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00032700011345/21b929532f68a1aa140bd3fbeb4f04ae_large.png&width=512&type=webp&quality=80",
+        "description": "Help get rid of those pests bothering your furry friend with Hartz UltraGuard Rid Worm Liquid Cat Treatment. This easy-to-use solution can be applied directly in your paw-tner’s mouth or in her food as an effective method to remove roundworms. It works on both adult cats and kittens eight weeks of age or older. Maintain your kitty’s health with Hartz UltraGuard Rid Worm Liquid Cat Treatment.",
+        "price": 789
+    },
+    {
+        "id": 2,
+        "name": "Dog Retractable Leash",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBkOhWWdLx_3Cj9nPp7Nc3QsdrorF053oA6Q&usqp=CAU",
+        "description": "Flexi Retractable Dog Leash (Tape), 16 ft, Large, Black. Suitable for large dogs up to 110 lbs. Intuitive handling, thanks to convenient brake button and ergonomic grip handle. Our retractable leash lets you walk your dog at your own pace, while letting your dog walk at his, thus providing an enjoyable walk for both!",
+        "price": 476
+    },
+    {
+        "id": 3,
+        "name": "Pet Cafe Gravity Waterer",
+        "img": "https://m.media-amazon.com/images/I/610Nmo3FnEL.jpg",
+        "description": "Automatic pet waterer. Features an automatic gravity design that keeps your pet hydrated by replenishing your pet's water supply. The eco-friendly water hopper automatically fills the water reservoir when levels get low and features a large water dispensing hole making the bottle easy to clean. ",
+        "price": 465
+    },
+    {
+        "id": 4,
+        "name": "Emergency Pet Rescue Decals",
+        "img": "https://i.etsystatic.com/6728085/r/il/aed8e4/491938399/il_794xN.491938399_tr0z.jpg",
+        "description": "Let emergency rescue workers and/or firemen know that you have a precious pet inside your home that needs to be rescued in the event of a fire or other emergency!",
+        "price": 500
+    },
+    {
+        "id": 5,
+        "name": "Doskocil Puffy Round Cat Bed",
+        "img": "https://www.kroger.com/product/images/large/front/0002969527459",
+        "description": "These Petmate beds feature a variety of soothing fabrics including suede, sheepskin, terry and chenille, your pet will think these beds are too much fun to be in!.",
+        "price": 985
+    },
+    {
+        "id": 6,
+        "name": "Arm & Hammer 71045 Dispenser and Disposable Waste Bags",
+        "img": "https://m.media-amazon.com/images/I/71FGDq9oTfL.jpg",
+        "description": "Arm and Hammer waste bags and dispensers. Waste bags and dispensers generations have trusted natural strength to handle their tough messes. The waste bag dispenser makes it easy for pet parents to carry waste bags for quick and easy clean-up. The dispenser attaches to any leash for convenient access.",
+        "price": 365
+    },
+    {
+        "id": 7,
+        "name": "Whitefish & Tuna Dinner Wet Cat Food",
+        "img": "https://www.kroger.com/product/images/large/front/0005000042494",
+        "description": "The delectable flavours of ocean whitefish and tuna, plus a smooth, pleasing texture will have your cat eagerly anticipating mealtime every day. 100% complete and balanced nutrition for adult cats. A delightful meal made with real ocean whitefish and tuna. ",
+        "price": 876
+    },
+    {
+        "id": 8,
+        "name": "Grilled Liver & Chicken Feast in Gravy Wet Cat Food",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd41dXDpQY9fWS-K-LDH4e-lOw58xFRktndvMxzvSjGTUz94JlKZGOr9QFuaISe3aLW8g&usqp=CAU",
+        "description": "Slow-cooked cuts with liver and chicken, basted in savory gravy. Crafted with real, high-quality chicken. 100% complete and balanced for adult cat. Delicious, high-quality in every detail.",
+        "price": 354
+    },
+    {
+        "id": 9,
+        "name": "Ark Naturals Brushless Toothpaste Chewable",
+        "img": "https://m.media-amazon.com/images/I/71MzOrGmbuL._AC_SL1500_.jpg",
+        "description": "FORMULATED FOR MINI BREED DOGS: Our Vet recommended dental chew is specifically formulated for mini to small breed puppies and adult dogs that are 8 pounds or less. BRUSH TWO TIMES A DAY: For best results, we recommend a tooth-brushing regimen of two Brushless chews per day.",
+        "price": 387
+    },
+    {
+        "id": 10,
+        "name": "Revolution Plus Topical Solution for Cats",
+        "img": "http://www.heartlandvetsupply.com/images/Product/large/110-RevolutionPLUSCats.jpg",
+        "description": "Help protect your four-legged friend from pesky critters with this 6-in-1 broad spectrum monthly Topical Solution for Cats by Revolution Plus. Simply apply the quick-drying, small-volume prescription to help: kill fleas before they lay eggs, kill ticks for a full month, prevent heartworm disease and treat and control roundworms, hookworms and ear mites. ",
+        "price": 235
+    }
+]

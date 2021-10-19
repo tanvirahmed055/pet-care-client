@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, FormControl, InputGroup, Button, Row } from 'react-bootstrap';
-
 import './Footer.css';
+import { HashLink } from 'react-router-hash-link';
 
 const Footer = () => {
     return (
@@ -22,10 +22,12 @@ const Footer = () => {
                     <Col sm={3}>
                         <h3 className="text-center">Quick Links</h3>
                         <ul>
-                            <li className="mb-1"><a href="#">Home</a></li>
-                            <li className="mb-1"><a href="#">Services</a></li>
-                            <li className="mb-1"><a href="#">About Us</a></li>
-                            <li className="mb-3"><a href="#">Contact Us</a></li>
+
+                            <HashLink className="me-2 nav-link" style={{ color: 'white' }} to="/home#services">Services</HashLink>
+
+                            <HashLink className="me-2 nav-link" style={{ color: 'white' }} to="/home#team">Our Team</HashLink>
+
+                            <HashLink className="me-2 nav-link" style={{ color: 'white' }} to="/home#about">About Us</HashLink>
                         </ul>
 
                     </Col>

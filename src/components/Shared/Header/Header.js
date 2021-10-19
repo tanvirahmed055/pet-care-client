@@ -18,6 +18,12 @@ const Header = () => {
                         <Nav.Link href="#pricing" className="me-2">Our Team</Nav.Link>
                         <Nav.Link href="#features" className="me-3">About Us</Nav.Link>
 
+                        {
+                            userInfo?.email && <Link to="/store">
+                                <Button variant="primary" className="me-3">Go to Store</Button>
+                            </Link>
+                        }
+
                         {userInfo?.email ? <Link to="/">
                             <Button variant="warning" className="me-3" onClick={() => handleLogOut()}>Logout</Button>
                         </Link> :
@@ -26,17 +32,9 @@ const Header = () => {
                             </Link>
                         }
 
-
-
-
                         <Link to="/register">
                             <Button variant="danger" className="me-3">Signup</Button>
                         </Link>
-
-
-
-
-
                     </Nav>
                 </Navbar.Collapse>
             </Container>

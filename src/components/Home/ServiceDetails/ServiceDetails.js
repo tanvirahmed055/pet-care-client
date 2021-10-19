@@ -24,7 +24,7 @@ const ServiceDetails = () => {
                 <Col sm={5}>
                     <h3 className="fw-bolder text-start">Service Name:&nbsp;{currentService?.name}</h3>
                     <p className="text-start mt-5"><span className="text-decoration-underline">Service Description:</span>&nbsp;{currentService?.detailDescription}</p>
-                    <Button variant="primary">Proceed to book an appointment</Button>
+                    <Button className="mt-3" variant="primary" size="lg">Book an Appoinment</Button>
                 </Col>
             </Row>
         </Container>

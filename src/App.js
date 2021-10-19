@@ -38,12 +38,12 @@ function App() {
             <Route exact path="/register">
               <Registration></Registration>
             </Route>
-            <Route exact path="/store">
+            <PrivateRoute exact path="/store">
               <Store></Store>
-            </Route>
-            <Route exact path="/items/:itemId">
+            </PrivateRoute>
+            <PrivateRoute exact path="/items/:itemId">
               <StoreItemDetail></StoreItemDetail>
-            </Route>
+            </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>
             </Route>

@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import useAuth from '../../../hooks/useAuth';
-
+import {
+    useHistory,
+    useLocation
+} from "react-router-dom";
 
 
 const Login = () => {
@@ -17,6 +20,33 @@ const Login = () => {
         setPassword(e.target.value);
     }
 
+    let history = useHistory();
+    let location = useLocation();
+
+    let { from } = location.state || { from: { pathname: "/" } };
+
+    let handleLogin = () => {
+        handleUserLogin(email, password)
+            .then((result) => {
+                // Signed in 
+                const user = result.user;
+                // ...
+                console.log(user);
+                history.push(from);
+
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode);
+                console.log(errorMessage);
+                if (errorCode === 'auth/user-not-found') {
+                    alert('Please provide the correct email address to login');
+                } else if (errorCode === 'auth/wrong-password') {
+                    alert('Incorrect Password');
+                }
+            });
+    };
 
     return (
         <div className="container mt-5">
@@ -41,7 +71,7 @@ const Login = () => {
                     </Link>
                 </div>
 
-                <Button onClick={() => { handleUserLogin(email, password) }} variant="primary" type="button" size="lg">
+                <Button onClick={() => handleLogin()} variant="primary" type="button" size="lg">
                     Submit
                 </Button>
 

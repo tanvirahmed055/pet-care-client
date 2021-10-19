@@ -44,26 +44,8 @@ const useFirebase = () => {
     }
 
     const handleUserLogin = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
-            .then((result) => {
-                // Signed in 
-                const user = result.user;
-                // ...
-                console.log(user);
+        return signInWithEmailAndPassword(auth, email, password)
 
-
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode);
-                console.log(errorMessage);
-                if (errorCode === 'auth/user-not-found') {
-                    alert('Please provide the correct email address to login');
-                } else if (errorCode === 'auth/wrong-password') {
-                    alert('Incorrect Password');
-                }
-            });
     }
 
     useEffect(() => {

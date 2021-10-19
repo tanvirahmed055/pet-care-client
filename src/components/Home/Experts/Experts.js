@@ -21,7 +21,7 @@ const Experts = () => {
         }
     ]
     return (
-        <div className="container mt-5">
+        <div className="container mt-5" id="team">
             <h3 className="fw-bolder mb-3">Our Team</h3>
             <p className="text-center mb-4">We have a team of expert veterinarians who specialized in diverse fields <br />who has years of experience working with pets</p>
             <Row xs={1} md={3} className="g-4">

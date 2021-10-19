@@ -5,7 +5,7 @@ import about_image1 from '../../../img/about_image1.jpeg';
 
 const About = () => {
     return (
-        <Container className="mt-5 pt-4 mb-5">
+        <Container className="mt-5 pt-4 mb-5" id="about">
             <Row className="g-4">
                 <Col sm={5} >
                     <h3 className="fw-bolder mb-3">About Us</h3>

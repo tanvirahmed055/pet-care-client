@@ -1,22 +1,28 @@
 import React from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import useAuth from '../../../hooks/useAuth'
+import useAuth from '../../../hooks/useAuth';
+import { HashLink } from 'react-router-hash-link';
+
 
 const Header = () => {
     const { userInfo, handleLogOut } = useAuth();
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">Pet Care</Navbar.Brand>
+                <Link to="/">
+                    <Navbar.Brand >Pet Care</Navbar.Brand></Link>
+
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
                         {userInfo?.email && <Nav.Link className="me-2 fw-bold text-white" href="#features">Signed in as: {userInfo?.displayName}</Nav.Link>}
 
-                        <Nav.Link className="me-2" href="#features">Services</Nav.Link>
-                        <Nav.Link href="#pricing" className="me-2">Our Team</Nav.Link>
-                        <Nav.Link href="#features" className="me-3">About Us</Nav.Link>
+                        <Nav.Link className="me-2 "><HashLink style={{ color: 'white' }} to="/home#services">Services</HashLink></Nav.Link>
+
+                        <Nav.Link className="me-2 "><HashLink style={{ color: 'white' }} to="/home#team">Our Team</HashLink></Nav.Link>
+
+                        <Nav.Link className="me-2 "><HashLink style={{ color: 'white' }} to="/home#about">About Us</HashLink></Nav.Link>
 
                         {
                             userInfo?.email && <Link to="/store">

@@ -1,11 +1,6 @@
 import React from 'react';
 import { Card, Col, Button } from 'react-bootstrap';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    useParams,
-    Link,
     useHistory
 } from "react-router-dom";
 
@@ -14,9 +9,6 @@ const Service = (props) => {
     const { id, name, img, shortDescription } = props.service;
 
     let history = useHistory();
-
-
-
 
     return (
         <Col>

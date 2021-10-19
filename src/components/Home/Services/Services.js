@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import useServices from '../../../hooks/useServices';
 import Service from '../Service/Service';
 

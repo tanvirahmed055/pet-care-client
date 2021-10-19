@@ -16,13 +16,14 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
-                        {userInfo?.email && <Nav.Link className="me-2 fw-bold text-white" href="#features">Signed in as: {userInfo?.displayName}</Nav.Link>}
+                        {userInfo?.email && <Nav.Link className="me-2 fw-bold text-white" >Signed in as: {userInfo?.displayName}</Nav.Link>}
 
-                        <Nav.Link className="me-2 "><HashLink style={{ color: 'white' }} to="/home#services">Services</HashLink></Nav.Link>
+                        <HashLink className="me-2 nav-link" style={{ color: 'white' }} to="/home#services">Services</HashLink>
 
-                        <Nav.Link className="me-2 "><HashLink style={{ color: 'white' }} to="/home#team">Our Team</HashLink></Nav.Link>
+                        <HashLink className="me-2 nav-link" style={{ color: 'white' }} to="/home#team">Our Team</HashLink>
 
-                        <Nav.Link className="me-2 "><HashLink style={{ color: 'white' }} to="/home#about">About Us</HashLink></Nav.Link>
+                        <HashLink className="me-2 nav-link" style={{ color: 'white' }} to="/home#about">About Us</HashLink>
+
 
                         {
                             userInfo?.email && <Link to="/store">

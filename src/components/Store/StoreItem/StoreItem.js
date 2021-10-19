@@ -1,11 +1,6 @@
 import React from 'react';
 import { Card, Col, Button } from 'react-bootstrap';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    useParams,
-    Link,
     useHistory
 } from "react-router-dom";
 

@@ -29,9 +29,8 @@ const Login = () => {
         handleUserLogin(email, password)
             .then((result) => {
                 // Signed in 
-                const user = result.user;
                 // ...
-                console.log(user);
+
                 history.push(from);
 
             })
@@ -52,15 +51,13 @@ const Login = () => {
         handleGoogleLogin()
             .then((result) => {
                 // The signed-in user info.
-                const user = result.user;
                 history.push(from);
                 // ...
             }).catch((error) => {
                 // Handle Errors here.
-                const errorCode = error.code;
+
                 const errorMessage = error.message;
                 // The email of the user's account used.
-                const email = error.email;
                 // ...
                 console.log(errorMessage);
             });

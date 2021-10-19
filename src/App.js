@@ -1,12 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home/Home/Home';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link,
-  useParams
+  Route
 } from "react-router-dom";
 import ServiceDetails from './components/Home/ServiceDetails/ServiceDetails';
 import Login from './components/Login/Login/Login';

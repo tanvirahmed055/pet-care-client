@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import initializeAuthentication from '../components/Login/Firebase/firebase.init';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
@@ -36,7 +36,6 @@ const useFirebase = () => {
                 });
             })
             .catch((error) => {
-                const errorCode = error.code;
                 const errorMessage = error.message;
                 // ..
                 console.log(errorMessage);

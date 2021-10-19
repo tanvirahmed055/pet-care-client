@@ -1,6 +1,5 @@
 import React from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
-import useServices from '../../../hooks/useServices';
+import { Row } from 'react-bootstrap';
 import useStore from '../../../hooks/useStore';
 import StoreItem from '../StoreItem/StoreItem';
 

@@ -5,16 +5,19 @@ const Experts = () => {
 
     const experts = [
         {
+            id: 1,
             name: 'Dr. Steve Archi',
             specialities: 'Animal Medicine',
             img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0lv2TTkWj6OkGH25V9gu0Zw0V8MDosT-hWw&usqp=CAU'
         },
         {
+            id: 2,
             name: 'Dr. Steve Archi',
             specialities: 'Surgery',
             img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY1G8_J5QHaeTFaQWvw0_U0GY_ipfwu7Ag_A&usqp=CAU'
         },
         {
+            id: 3,
             name: 'Dr. Mark Torry',
             specialities: 'Dental',
             img: 'https://jupiterx.artbees.net/vet-2/wp-content/uploads/sites/435/2020/06/gallery-05.jpg'
@@ -26,7 +29,7 @@ const Experts = () => {
             <p className="text-center mb-4">We have a team of expert veterinarians who specialized in diverse fields <br />who has years of experience working with pets</p>
             <Row xs={1} md={3} className="g-4">
                 {
-                    experts.map(expert => <Col>
+                    experts.map(expert => <Col key={expert.id}>
                         <Card className="text-center h-100">
                             <Card.Img variant="top" src={expert.img} style={{ height: '300px' }} />
                             <Card.Body>

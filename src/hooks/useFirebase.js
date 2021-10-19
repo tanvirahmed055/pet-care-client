@@ -9,6 +9,8 @@ const useFirebase = () => {
 
     const [userInfo, setUserInfo] = useState(null);
 
+    const [loading, setLoading] = useState(true);
+
     const auth = getAuth();
 
     const googleProvider = new GoogleAuthProvider();
@@ -77,6 +79,7 @@ const useFirebase = () => {
                 // User is signed out
                 // ...
             }
+            setLoading(false);
         });
     }, [])
 
@@ -113,7 +116,8 @@ const useFirebase = () => {
         handleUserLogin,
         userInfo,
         handleLogOut,
-        handleGoogleLogin
+        handleGoogleLogin,
+        loading
     };
 };
 

@@ -48,6 +48,24 @@ const Login = () => {
             });
     };
 
+    let handleLoginForGoogle = () => {
+        handleGoogleLogin()
+            .then((result) => {
+                // The signed-in user info.
+                const user = result.user;
+                history.push(from);
+                // ...
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // The email of the user's account used.
+                const email = error.email;
+                // ...
+                console.log(errorMessage);
+            });
+    };
+
     return (
         <div className="container mt-5">
             <h2 className="fw-bolder text-center mb-5">Sign In</h2>
@@ -75,7 +93,7 @@ const Login = () => {
                     Submit
                 </Button>
 
-                <Button onClick={() => { handleGoogleLogin() }} variant="danger" type="button" size="lg" className="ms-3">
+                <Button onClick={() => { handleLoginForGoogle() }} variant="danger" type="button" size="lg" className="ms-3">
                     Google Signin
                 </Button>
 

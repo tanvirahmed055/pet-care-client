@@ -20,7 +20,8 @@ const StoreItemDetail = () => {
                 </Col>
                 <Col sm={5}>
                     <h3 className="fw-bolder text-start">Name:&nbsp;{currentItem?.name}</h3>
-                    <p className="text-start mt-5"><span className="text-decoration-underline">Description:</span>&nbsp;{currentItem?.description}</p>
+                    <p className="text-start mt-5 mb-4"><span className="text-decoration-underline">Description:</span>&nbsp;{currentItem?.description}</p>
+                    <h5>Price: &nbsp;${currentItem?.price}</h5>
                     <Button className="mt-3" variant="primary" size="lg">Buy Now</Button>
                 </Col>
             </Row>

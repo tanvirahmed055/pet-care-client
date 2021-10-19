@@ -20,7 +20,7 @@ const Header = () => {
 
                         {
                             userInfo?.email && <Link to="/store">
-                                <Button variant="primary" className="me-3">Go to Store</Button>
+                                <Button variant="primary" className="me-3">In House Pharmacy</Button>
                             </Link>
                         }
 

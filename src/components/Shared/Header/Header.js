@@ -13,7 +13,7 @@ const Header = () => {
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="p-3">
             <Container>
                 <Link to="/">
-                    <Navbar.Brand className="fs-3 fw-bolder fst-italic"><i class="fas fa-clinic-medical"></i>Pet Care</Navbar.Brand></Link>
+                    <Navbar.Brand className="fs-3 fw-bolder fst-italic"><i className="fas fa-clinic-medical"></i>Pet Care</Navbar.Brand></Link>
 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">

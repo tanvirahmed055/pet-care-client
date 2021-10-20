@@ -3,14 +3,18 @@ import { Button, Col, Form, Row } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import './Registration.css';
 import useAuth from '../../../hooks/useAuth';
+import {
+    useHistory,
+} from "react-router-dom";
 
 const Registration = () => {
-    const { handleUserRegistration, handleGoogleLogin } = useAuth();
+    const { handleUserRegistration, handleGoogleLogin, handleUpdateProfile } = useAuth();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState();
 
+    let history = useHistory();
 
 
     const handleEmailInput = (e) => {
@@ -21,6 +25,23 @@ const Registration = () => {
     }
     const handleNameInput = (e) => {
         setName(e.target.value);
+    }
+
+    const handleRegister = () => {
+        handleUserRegistration(email, password, name)
+            .then((result) => {
+                // Signed in 
+                const user = result.user;
+                // ...
+                console.log(user);
+                handleUpdateProfile(name);
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                // ..
+                console.log(errorMessage);
+            });
+        history.push('/login');
     }
     return (
         <div className="container mt-5">
@@ -51,7 +72,7 @@ const Registration = () => {
                 </div>
                 <br />
 
-                <Button onClick={() => { handleUserRegistration(email, password, name) }} variant="primary" type="button" size="lg">
+                <Button onClick={() => { handleRegister() }} variant="primary" type="button" size="lg">
                     Submit
                 </Button>
 

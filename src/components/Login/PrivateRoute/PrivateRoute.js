@@ -12,7 +12,7 @@ const PrivateRoute = ({ children, ...rest }) => {
             {...rest}
             render={({ location }) =>
                 loading ? <Spinner animation="grow" /> :
-                    userInfo?.email ? (
+                    userInfo?.displayName ? (
                         children
                     ) : (
                         <Redirect

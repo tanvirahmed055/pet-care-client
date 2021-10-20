@@ -3,6 +3,7 @@ import initializeAuthentication from '../components/Login/Firebase/firebase.init
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 
+
 initializeAuthentication();
 
 const useFirebase = () => {
@@ -19,27 +20,8 @@ const useFirebase = () => {
 
 
     const handleUserRegistration = (email, password, name) => {
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((result) => {
-                // Signed in 
-                const user = result.user;
-                // ...
-                console.log(user);
-                updateProfile(auth.currentUser, {
-                    displayName: name
-                }).then(() => {
-                    // Profile updated!
-                    // ...
-                }).catch((error) => {
-                    // An error occurred
-                    // ...
-                });
-            })
-            .catch((error) => {
-                const errorMessage = error.message;
-                // ..
-                console.log(errorMessage);
-            });
+        return createUserWithEmailAndPassword(auth, email, password)
+
     }
 
     const handleUserLogin = (email, password) => {
@@ -77,13 +59,32 @@ const useFirebase = () => {
         return signInWithPopup(auth, googleProvider)
     }
 
+    const handleUpdateProfile = (name) => {
+        updateProfile(auth.currentUser, {
+            displayName: name
+        }).then(() => {
+            // Profile updated!
+            // ...
+        }).catch((error) => {
+            // An error occurred
+            // ...
+        });
+
+    }
+
+
     return {
         handleUserRegistration,
         handleUserLogin,
         userInfo,
         handleLogOut,
         handleGoogleLogin,
-        loading
+        loading,
+        updateProfile,
+        auth,
+        setLoading,
+        setUserInfo,
+        handleUpdateProfile,
     };
 };
 

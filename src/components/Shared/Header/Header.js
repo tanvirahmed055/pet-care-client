@@ -5,8 +5,10 @@ import useAuth from '../../../hooks/useAuth';
 import { HashLink } from 'react-router-hash-link';
 
 
+
 const Header = () => {
     const { userInfo, handleLogOut } = useAuth();
+
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
@@ -16,7 +18,9 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
-                        {userInfo?.email && <Nav.Link className="me-2 fw-bold text-white" >Signed in as: {userInfo?.displayName}</Nav.Link>}
+
+
+                        {userInfo?.displayName && <Nav.Link className="me-2 fw-bold text-white" >Signed in as: {userInfo?.displayName}</Nav.Link>}
 
                         <HashLink className="me-2 nav-link" style={{ color: 'white' }} to="/home#services">Services</HashLink>
 

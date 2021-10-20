@@ -1,3 +1,4 @@
+/* Banner Component Style */
 .banner-container{
     background-image: linear-gradient( rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0.1)100%),url('../../../img/banner.jpeg');
     background-repeat: none;

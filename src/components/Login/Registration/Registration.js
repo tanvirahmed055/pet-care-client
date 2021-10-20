@@ -31,15 +31,10 @@ const Registration = () => {
         handleUserRegistration(email, password, name)
             .then((result) => {
                 // Signed in 
-                const user = result.user;
-                // ...
-                console.log(user);
                 handleUpdateProfile(name);
             })
             .catch((error) => {
-                const errorMessage = error.message;
-                // ..
-                console.log(errorMessage);
+
             });
         history.push('/login');
     }

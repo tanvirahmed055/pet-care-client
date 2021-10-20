@@ -12,6 +12,7 @@ const Login = () => {
     const { handleUserLogin, handleGoogleLogin } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleEmailInput = (e) => {
         setEmail(e.target.value);
@@ -36,13 +37,12 @@ const Login = () => {
             })
             .catch((error) => {
                 const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode);
-                console.log(errorMessage);
                 if (errorCode === 'auth/user-not-found') {
-                    alert('Please provide the correct email address to login');
+                    let errorMessage1 = 'Please provide the correct email address to login';
+                    setErrorMessage(errorMessage1);
                 } else if (errorCode === 'auth/wrong-password') {
-                    alert('Incorrect Password');
+                    let errorMessage2 = 'Incorrect Password';
+                    setErrorMessage(errorMessage2);
                 }
             });
     };
@@ -56,10 +56,6 @@ const Login = () => {
             }).catch((error) => {
                 // Handle Errors here.
 
-                const errorMessage = error.message;
-                // The email of the user's account used.
-                // ...
-                console.log(errorMessage);
             });
     };
 
@@ -78,7 +74,9 @@ const Login = () => {
                         <Form.Control onBlur={handlePasswordInput} type="password" placeholder="Password" />
                     </Form.Group>
                 </Row>
-
+                <div>
+                    <h4 className="text-danger mb-5">{errorMessage}</h4>
+                </div>
                 <div className="mt-3 mb-5">
                     <Link to="/register">
                         <h4 className="toggle-button">New Here?</h4>

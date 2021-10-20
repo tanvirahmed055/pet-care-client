@@ -10,10 +10,10 @@ const Header = () => {
     const { userInfo, handleLogOut } = useAuth();
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="p-3">
             <Container>
                 <Link to="/">
-                    <Navbar.Brand >Pet Care</Navbar.Brand></Link>
+                    <Navbar.Brand className="fs-3 fw-bolder fst-italic"><i class="fas fa-clinic-medical"></i>Pet Care</Navbar.Brand></Link>
 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -31,12 +31,12 @@ const Header = () => {
 
                         {
                             userInfo?.email && <Link to="/store">
-                                <Button variant="primary" className="me-3">In House Pharmacy</Button>
+                                <Button variant="primary" className="me-3 mb-1">In House Pharmacy</Button>
                             </Link>
                         }
 
                         {userInfo?.email ? <Link to="/">
-                            <Button variant="warning" className="me-3" onClick={() => handleLogOut()}>Logout</Button>
+                            <Button variant="warning" className="me-3 mb-1" onClick={() => handleLogOut()}>Logout</Button>
                         </Link> :
                             <Link to="/login">
                                 <Button variant="warning" className="me-3">Login</Button>

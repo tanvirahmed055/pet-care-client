@@ -1,7 +1,7 @@
 import React from 'react';
-import useServices from '../../../hooks/useServices';
+import useServices from '../../../../hooks/useServices';
 import { Button, Col, Container, Row } from 'react-bootstrap';
-
+import { Link } from "react-router-dom";
 
 const ManageServices = () => {
     const [services] = useServices();
@@ -19,6 +19,10 @@ const ManageServices = () => {
             })
     }
 
+    const handleUpdate = id => {
+
+    }
+
     return (
         <div>
             <h2>Welcome to Manage Services</h2>
@@ -26,12 +30,16 @@ const ManageServices = () => {
                 {
                     services.map(service => <li className="fw-bold mb-5">Service Name:&nbsp;{service?.name}
                         <Button onClick={() => handleDelete(service?._id)} className="ms-3" variant="danger" size="sm">Delete Service</Button>
-                        <Button className="ms-3" variant="primary" size="sm">Update Service</Button></li>
+                        <Button onClick={() => handleDelete(service?._id)} className="ms-3" variant="primary" size="sm">Update Service</Button></li>
                     )
                 }
             </div>
-
-        </div>
+            <div>
+                <Link to='/admin/manageService/addService'>
+                    <Button variant="danger" className="me-3">Add a New Service</Button>
+                </Link>
+            </div>
+        </div >
     );
 };
 

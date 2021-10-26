@@ -14,8 +14,10 @@ import NotFound from './components/Home/NotFound/NotFound';
 import Store from './components/Store/Store/Store';
 import StoreItemDetail from './components/Store/StoreItemDetail/StoreItemDetail';
 import Admin from './components/Admin/Admin/Admin';
-import ManageServices from './components/Admin/ManageServices/ManageServices';
-import ManageStore from './components/Admin/ManageStore/ManageStore';
+import AddService from './components/Admin/ManageService/AddService/AddService';
+import UpdateService from './components/Admin/ManageService/UpdateService/UpdateService';
+import ManageServices from './components/Admin/ManageService/ManageService/ManageService';
+
 
 function App() {
   return (
@@ -47,11 +49,14 @@ function App() {
             <Route exact path="/admin">
               <Admin></Admin>
             </Route>
-            <Route exact path="/admin/manageServices">
+            <Route exact path="/admin/manageService">
               <ManageServices></ManageServices>
             </Route>
-            <Route exact path="/admin/manageStore">
-              <ManageStore></ManageStore>
+            <Route exact path="/admin/manageService/addService">
+              <AddService></AddService>
+            </Route>
+            <Route exact path="/admin/manageService/updateService/:id">
+              <UpdateService></UpdateService>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

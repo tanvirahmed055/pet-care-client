@@ -13,6 +13,9 @@ import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import NotFound from './components/Home/NotFound/NotFound';
 import Store from './components/Store/Store/Store';
 import StoreItemDetail from './components/Store/StoreItemDetail/StoreItemDetail';
+import Admin from './components/Admin/Admin/Admin';
+import ManageServices from './components/Admin/ManageServices/ManageServices';
+import ManageStore from './components/Admin/ManageStore/ManageStore';
 
 function App() {
   return (
@@ -41,6 +44,15 @@ function App() {
             <PrivateRoute exact path="/items/:itemId">
               <StoreItemDetail></StoreItemDetail>
             </PrivateRoute>
+            <Route exact path="/admin">
+              <Admin></Admin>
+            </Route>
+            <Route exact path="/admin/manageServices">
+              <ManageServices></ManageServices>
+            </Route>
+            <Route exact path="/admin/manageStore">
+              <ManageStore></ManageStore>
+            </Route>
             <Route path="*">
               <NotFound></NotFound>
             </Route>

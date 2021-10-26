@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
-import useServices from '../../../hooks/useServices';
 import {
     useParams
 } from "react-router-dom";

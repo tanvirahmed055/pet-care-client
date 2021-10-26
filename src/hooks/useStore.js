@@ -4,7 +4,7 @@ const useStore = () => {
     const [store, setStore] = useState([]);
 
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/tanvirahmed055/json-data-host/main/public/StoreData.json')
+        fetch('http://localhost:5000/storeData')
             .then(res => res.json())
             .then(data => setStore(data))
     }, [])
